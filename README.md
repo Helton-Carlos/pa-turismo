@@ -34,6 +34,8 @@ O projeto foi personalizado para refletir a identidade de Paulo Afonso:
 
 ### **Frontend**
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e8c66ec7-efee-4d17-a547-ecf0bdaac2b8" />
+
 ```bash
 /frontend
   ├── src
@@ -48,4 +50,4 @@ O projeto foi personalizado para refletir a identidade de Paulo Afonso:
   └── eslint.config.mjs       # Configuração de regras do TypeScript/Next.js
 
   
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e8c66ec7-efee-4d17-a547-ecf0bdaac2b8" />
+
