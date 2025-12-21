@@ -3,6 +3,20 @@ import Link from 'next/link';
 import { LogIn } from 'lucide-react';
 
 export default function PAFooter() {
+  const nav = [
+    {
+      link: '/roteiros',
+      title: 'Roteiros'
+    },
+    {
+      link: '/pontos-turisticos',
+      title: 'Atrativos'
+    },
+    {
+      link: '/eventos',
+      title: 'Eventos'
+    }
+  ]
   return (
     <footer className="bg-blue-900 py-4">
       <div className="flex items-center justify-between max-w-7xl mx-auto w-full">
@@ -20,35 +34,20 @@ export default function PAFooter() {
           </h1>
         </div>
 
-        <nav className="flex items-center gap-8">
-          <ul className="hidden lg:flex items-center gap-6 text-sm font-semibold">
-            <li>
-              <Link
-                href="/roteiros"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Roteiros
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/pontos-turisticos"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Atrativos
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/eventos"
-                className="hover:text-blue-600 transition-colors"
-              >
-                Eventos
-              </Link>
-            </li>
-          </ul>
 
-          <div className="hidden lg:block h-6 w-px bg-gray-200"></div>
+        <nav className="flex items-center gap-8">
+          {nav.map(item => (
+            <ul key={item.link} className="hidden lg:flex items-center gap-6 text-sm font-semibold">
+              <li>
+                <Link
+                  href={item.link}
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            </ul>
+          ))}
 
           <Link
             href="/login"
