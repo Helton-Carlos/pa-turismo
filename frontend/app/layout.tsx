@@ -27,10 +27,13 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`flex min-h-screen flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
         <PAHeader />
-        {children}
+        <div className="flex-1 flex">
+          {children}
+        </div>
         <PAFooter />
       </body>
     </html>
