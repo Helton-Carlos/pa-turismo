@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import PAHeader from "@/app/components/PAHeader";
+import PAFooter from "./components/PAFooter";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         <PAHeader />
         {children}
+        <PAFooter />
       </body>
     </html>
   );
