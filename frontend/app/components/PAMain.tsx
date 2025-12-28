@@ -2,7 +2,7 @@ import { ChevronRight } from 'lucide-react';
 
 export default function PAMain() {
   return (
-    <main className="relative bg-[url('/home/main-image.png')] bg-cover bg-center min-h-screen flex flex-col items-center justify-center text-white px-4">
+    <main className="relative bg-[url('/home/main-image.png')] bg-cover bg-center w-full min-h-screen flex flex-col items-center justify-center text-white px-4">
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
       <div className="relative z-10 text-center max-w-3xl">

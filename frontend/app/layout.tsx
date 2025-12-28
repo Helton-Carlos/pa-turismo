@@ -31,7 +31,7 @@ export default function RootLayout({
       >
 
         <PAHeader />
-        <div className="flex-1 flex">
+        <div>
           {children}
         </div>
         <PAFooter />

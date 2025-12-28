@@ -25,10 +25,10 @@ export default function Login() {
   }
 
   return (
-    <div className="flex-1 flex items-center justify-center">
+    <div className="my-14 flex justify-center">
       <form
         onSubmit={handleLogin}
-        className="w-80 rounded-xl border border-gray-200 bg-white p-6 space-y-5 shadow-md"
+        className="w-80 my-12 rounded-xl border border-gray-200 bg-white py-8 px-4 space-y-5 shadow-md"
       >
         <h2 className="text-2xl font-semibold text-center text-gray-800">
           Acesso ao sistema

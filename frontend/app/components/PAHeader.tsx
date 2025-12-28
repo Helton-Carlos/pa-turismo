@@ -6,7 +6,10 @@ export default function PAHeader() {
   return (
     <header className="py-4 px-6 bg-white shadow-sm border-b border-gray-100">
       <div className="flex items-center justify-between max-w-7xl mx-auto w-full">
-        <div className="flex items-center gap-3">
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+        >
           <Image
             src="/image/logo-pa-turismo.png"
             alt="Logomarca PA Turismo"
@@ -18,7 +21,7 @@ export default function PAHeader() {
           <h1 className="text-2xl font-bold text-blue-950 hidden md:block">
             PA Turismo
           </h1>
-        </div>
+        </Link>
 
         <nav className="flex items-center gap-8">
           <ul className="hidden lg:flex items-center gap-6 text-sm font-semibold text-gray-600">
