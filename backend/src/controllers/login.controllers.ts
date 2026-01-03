@@ -6,8 +6,6 @@ import type { User } from '../types/user.js';
 export async function createUser(req: Request<User>, res: Response) {
   const { name, email, password } = req.body;
 
-  console.log(name, email, password);
-
   try {
     const stmt = db.prepare(
       'INSERT INTO user (name, email, password) VALUES (?,?,?)',
