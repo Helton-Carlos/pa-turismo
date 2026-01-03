@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { auth } from "@/app/services/auth";
+import { toast } from "react-toastify";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -16,9 +17,12 @@ export default function Login() {
 
     try {
       await auth.login(email, password);
-      alert("Login realizado com sucesso");
+
+      toast.success("Login realizado com sucesso 🎉");
     } catch {
       setError("Email ou senha inválidos");
+
+      toast.error("Email ou senha inválidos");
     } finally {
       setLoading(false);
     }
