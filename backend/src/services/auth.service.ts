@@ -7,13 +7,16 @@ export class AuthService {
     return bcrypt.hash(password, authConfig.bcryptRounds);
   }
 
-  static async comparePasswords(plainPassword: string, hashedPassword: string): Promise<boolean> {
+  static async comparePasswords(
+    plainPassword: string,
+    hashedPassword: string,
+  ): Promise<boolean> {
     return bcrypt.compare(plainPassword, hashedPassword);
   }
 
   static generateToken(payload: any): string {
-    return jwt.sign(payload, authConfig.jwtSecret, {
-      expiresIn: authConfig.jwtExpiresIn
+    return jwt.sign(payload, authConfig.jwtSecret as string, {
+      expiresIn: authConfig.jwtExpiresIn as string,
     });
   }
 

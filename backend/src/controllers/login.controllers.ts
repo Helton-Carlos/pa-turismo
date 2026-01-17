@@ -7,9 +7,11 @@ import type { User } from '../types/user.js';
 export async function createUser(req: Request, res: Response) {
   try {
     const { name, email, password } = req.body;
+
     const existingUser = db
       .prepare('SELECT id FROM user WHERE email = ?')
       .get(email);
+
     if (existingUser) {
       return res.status(409).json({ error: 'Email já cadastrado' });
     }
